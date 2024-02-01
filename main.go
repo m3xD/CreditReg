@@ -31,8 +31,8 @@ type Lop struct {
 }
 
 func main() {
-	dsn := "host=postgresvm.postgres.database.azure.com user=mexd password=Saccar2108@ dbname=postgres port=5432 sslmode=disable"
-	_, err := gorm.Open(postgres.New(postgres.Config{
+	dsn := "host=postgresvm.postgres.database.azure.com user=mexd password=Saccar2108@ dbname=postgres port=5432 sslmode=require"
+	db, err := gorm.Open(postgres.New(postgres.Config{
 		DSN:                  dsn,
 		PreferSimpleProtocol: true,
 	}), &gorm.Config{})
