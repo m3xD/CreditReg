@@ -59,7 +59,7 @@ type LopSVReg struct {
 }
 
 func main() {
-	dsn := "host=postgresvm.postgres.database.azure.com user=mexd password=Saccar2108@ dbname=postgres port=5432 sslmode=require"
+	dsn := "host=<host_name> user=user_name password=user_password dbname=postgres port=5432 sslmode=require"
 	db, err := gorm.Open(postgres.New(postgres.Config{
 		DSN:                  dsn,
 		PreferSimpleProtocol: true,
